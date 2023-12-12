@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.1.5.RELEASE</version>
+        <version>2.7.10</version>
         <relativePath/>
     </parent>
     <groupId>ch.fitzi</groupId>
@@ -14,7 +14,8 @@
     <description>Demo project for using multiple datasources in a Spring Boot Application</description>
 
     <properties>
-        <java.version>11</java.version>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <commons.dbcp.version>1.4</commons.dbcp.version>
@@ -29,6 +30,7 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.16</version>
             <scope>runtime</scope>
         </dependency>
 
@@ -36,7 +38,7 @@
         <dependency>
             <groupId>com.microsoft.sqlserver</groupId>
             <artifactId>mssql-jdbc</artifactId>
-            <version>11.2.3.jre11</version>
+            <version>11.2.3.jre17</version>
         </dependency>
 
         <!-- Postgres driver -->

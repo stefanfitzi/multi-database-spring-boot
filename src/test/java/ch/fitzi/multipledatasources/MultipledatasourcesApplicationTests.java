@@ -6,20 +6,20 @@ import ch.fitzi.multipledatasources.model.member.Member;
 import ch.fitzi.multipledatasources.repository.card.CardRepository;
 import ch.fitzi.multipledatasources.repository.cardholder.CardHolderRepository;
 import ch.fitzi.multipledatasources.repository.member.MemberRepository;
-import org.junit.Before;
-import org.junit.Ignore;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import java.util.Optional;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
-@Ignore
-@RunWith(SpringRunner.class)
+@Disabled
+@ExtendWith(SpringExtension.class)
 @SpringBootTest
 public class MultipledatasourcesApplicationTests {
 
@@ -41,7 +41,7 @@ public class MultipledatasourcesApplicationTests {
     private Card card;
     private CardHolder cardHolder;
 
-    @Before
+    @BeforeEach
     public void initializeDataObjects(){
 
         member = new Member();
