@@ -1,0 +1,28 @@
+app:
+    datasource:
+        card:
+            driverClassName: org.postgresql.Driver
+            password: secret
+            url: jdbc:postgresql://localhost:15432/carddb
+            username: testuser
+        cardholder:
+            driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+            password: Secret+01
+            url: jdbc:sqlserver://localhost:11433;databasename=cardholderdb;createDatabaseIfNotExist=true;trustServerCertificate=true
+            username: sa
+        member:
+            driverClassName: com.mysql.cj.jdbc.Driver
+            password: secret
+            url: jdbc:mysql://localhost:13306/memberdb?createDatabaseIfNotExist=true
+            username: root
+spring:
+    jpa:
+        generate-ddl: true
+        hibernate:
+            ddl-auto: update
+        properties:
+            hibernate:
+                jdbc:
+                    lob:
+                        non_contextual_creation: true
+        show-sql: true
