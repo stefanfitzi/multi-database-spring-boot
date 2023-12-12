@@ -1,0 +1,27 @@
+version: '3.1'
+
+services:
+  postgres-db:
+    image: postgres
+    ports:
+      - "15432:5432"
+    environment:
+      POSTGRES_DB: postgres-test-db
+      POSTGRES_USER: testuser
+      POSTGRES_PASSWORD: secret
+      POSTGRES_DB: carddb
+  mysql-db:
+    image: mysql:8.0
+    ports:
+      - "13306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: secret
+  mssql-db:
+    build: mssql
+    ports:
+      - "11433:1433"
+    environment:
+      MSSQL_SA_PASSWORD: Secret+01
+      ACCEPT_EULA: Y
+
+
